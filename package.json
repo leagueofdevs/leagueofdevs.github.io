@@ -2,7 +2,7 @@
   "name": "coparecifelol",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://www.mateuseap.com/coparecifelol",
+  "homepage": "leagueofdevs.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
