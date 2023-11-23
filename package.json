@@ -2,6 +2,7 @@
   "name": "coparecifelol",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://www.mateuseap.com/coparecifelol",
   "type": "module",
   "scripts": {
     "dev": "vite",
