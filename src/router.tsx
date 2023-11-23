@@ -1,14 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+import { createBrowserRouter } from "react-router-dom";
 
-function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+import Home from "./pages/Home";
 
-export default Router;
+const router = createBrowserRouter([{ path: "/coparecifelol/", element: <Home /> }]);
+
+export default router;
