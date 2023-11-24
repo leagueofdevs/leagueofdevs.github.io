@@ -7,7 +7,7 @@ import {
 import { SVGProps } from "react";
 import { JSX } from "react/jsx-runtime";
 
-export default function Home() {
+function Home() {
   const primaryFeatures = [
     {
       name: "Server monitoring",
@@ -168,3 +168,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
