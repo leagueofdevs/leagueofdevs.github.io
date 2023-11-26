@@ -1,6 +1,6 @@
 import IreliaWallpaper from "../../assets/zed-wallpaper.jpg";
 import {
-  BoltIcon,
+  TrophyIcon,
   CalendarDaysIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
@@ -10,11 +10,12 @@ import { JSX } from "react/jsx-runtime";
 function Home() {
   const primaryFeatures = [
     {
-      name: "Server monitoring",
+      name: "Domine os Campos de Batalha",
       description:
-        "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
-      href: "#",
-      icon: BoltIcon,
+        "As inscrições para a Copa Recife de League of Legends começam em 03/12/2023. Não perca a oportunidade de mostrar suas habilidades no universo competitivo. Reúna sua equipe, consulte o regulamento e não perca a chance de se tornar um campeão!",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSeAhNCcrLeccb5o26AdtojU9yVqAeGOMEjGoka8eMeEzss0Wg/viewform?usp=sf_link",
+      buttonText: "Inscreva-se",
+      icon: TrophyIcon,
     },
     {
       name: "Collaborate",
@@ -33,30 +34,6 @@ function Home() {
   ];
 
   const footerNavigation = {
-    solutions: [
-      { name: "Hosting", href: "#" },
-      { name: "Data Services", href: "#" },
-      { name: "Uptime Monitoring", href: "#" },
-      { name: "Enterprise Services", href: "#" },
-    ],
-    support: [
-      { name: "Pricing", href: "#" },
-      { name: "Documentation", href: "#" },
-      { name: "Guides", href: "#" },
-      { name: "API Reference", href: "#" },
-    ],
-    company: [
-      { name: "About", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Jobs", href: "#" },
-      { name: "Press", href: "#" },
-      { name: "Partners", href: "#" },
-    ],
-    legal: [
-      { name: "Claim", href: "#" },
-      { name: "Privacy", href: "#" },
-      { name: "Terms", href: "#" },
-    ],
     social: [
       {
         name: "Instagram",
@@ -73,7 +50,7 @@ function Home() {
       },
       {
         name: "Twitter",
-        href: "#",
+        href: "https://twitter.com/CopaRecifedeLoL",
         icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -123,14 +100,18 @@ function Home() {
                   </dt>
                   <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
                     <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm font-semibold leading-6 text-indigo-400"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
+                    {feature.buttonText && (
+                      <p className="mt-6">
+                        <a
+                          href={feature.href}
+                          className="text-sm font-semibold leading-6 text-indigo-400"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {feature.buttonText} <span aria-hidden="true">→</span>
+                        </a>
+                      </p>
+                    )}
                   </dd>
                 </div>
               ))}
@@ -157,10 +138,16 @@ function Home() {
                   </a>
                 ))}
               </div>
-              <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-                &copy; 2023 Copa Recife de League of Legends. Todos os direitos
-                reservados.
-              </p>
+              <div className="flex flex-col">
+                <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+                  Esta competição não é afiliada/patrocinada pela Riot Games, Inc. ou League of
+                  Legends/Teamfight Tactics Esports.
+                </p>
+                <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-4">
+                  &copy; 2023 Copa Recife de League of Legends. Todos os direitos
+                  reservados.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
