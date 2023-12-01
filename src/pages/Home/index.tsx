@@ -1,4 +1,4 @@
-import IreliaWallpaper from "../../assets/zed-wallpaper.jpg";
+import ZedWallpaper from "../../assets/zed-wallpaper.jpg";
 import {
   TrophyIcon,
   ShieldCheckIcon,
@@ -66,8 +66,8 @@ function Home() {
     <div className="w-full h-full">
       <div className="relative h-screen">
         <img
-          src={IreliaWallpaper}
-          alt="Irelia Wallpaper"
+          src={ZedWallpaper}
+          alt="Zed Wallpaper"
           className="w-screen h-screen object-cover object-center"
         />
         <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">
