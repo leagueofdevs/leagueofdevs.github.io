@@ -1,11 +1,13 @@
 import IreliaWallpaper from "../../assets/zed-wallpaper.jpg";
 import {
   TrophyIcon,
-  CalendarDaysIcon,
+  ShieldCheckIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
 import { JSX } from "react/jsx-runtime";
+import BaseGamingLogo from "../../assets/base-gaming-logo.png";
+import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 
 function Home() {
   const primaryFeatures = [
@@ -18,18 +20,19 @@ function Home() {
       icon: TrophyIcon,
     },
     {
-      name: "Collaborate",
+      name: "Quem Pode Participar",
       description:
-        "Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.",
-      href: "#",
+        "Todos são bem-vindos! Não importa se você é um jogador experiente ou se está começando agora no universo de Summoner's Rift. Na Copa Recife, a diversão e a competição andam lado a lado. Envolva-se, faça novos amigos e mergulhe na emoção de disputar partidas épicas!",
+      href: "https://docs.google.com/document/d/1jzkpLS9lJo9ZsQtC4ZmpgbJ33VHD1CrmiPXZLHGtGJs/edit?pli=1",
+      buttonText: "Veja o Regulamento Oficial",
       icon: UsersIcon,
     },
     {
-      name: "Task scheduling",
+      name: "Proteção para Monochampions",
       description:
-        "Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.",
+        "Entendemos que cada jogador tem seu próprio estilo único. Se você é um monochampion dedicado, oferecemos condições especiais para você! Queremos que todos os monochampions se sintam valorizados e apoiados ao entrarem no cenário competitivo do nosso amado LoLzinho. Venha mostrar suas habilidades e celebrar a diversidade de estratégias no campo de batalha!",
       href: "#",
-      icon: CalendarDaysIcon,
+      icon: ShieldCheckIcon,
     },
   ];
 
@@ -72,17 +75,16 @@ function Home() {
             COPA RECIFE DE LEAGUE OF LEGENDS
           </span>
         </div>
-        <div className="mx-auto my-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto my-16 max-w-7xl px-6 lg:px-8 lg:my-24">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-400">
-              Deploy faster
+              Seja Bem-Vindo à Copa Recife de League of Legends!
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Everything you need to deploy your app
-            </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              Na Copa Recife, estamos comprometidos em proporcionar uma
+              experiência inclusiva e divertida para todos os participantes,
+              independentemente do nível de habilidade ou do número de campeões
+              em seu repertório.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -118,6 +120,34 @@ function Home() {
             </dl>
           </div>
         </div>
+        <div className="flex flex-col gap-y-12 mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8 justify-center items-center mb-16 lg:mb-24">
+          <h2 className="text-center text-lg font-semibold leading-8 text-white">
+            Patrocinadores
+          </h2>
+          <div className="flex flex-col gap-y-12 justify-center items-center gap-x-12 lg:flex-row">
+            <img
+              className="max-h-12 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+              src={BaseGamingLogo}
+              alt="Logo da BASE Gaming"
+              draggable={false}
+              onClick={() => {
+                window.open(
+                  "https://www.instagram.com/basegaminggg/",
+                  "_blank"
+                );
+              }}
+            />
+            <img
+              className="max-h-12 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+              src={QuadriframeLogo}
+              alt="Logo do Quadriframe"
+              draggable={false}
+              onClick={() => {
+                window.open("https://www.quadriframe.com.br/", "_blank");
+              }}
+            />
+          </div>
+        </div>
         <footer aria-labelledby="footer-heading" className="relative">
           <h2 id="footer-heading" className="sr-only">
             Footer
@@ -140,12 +170,12 @@ function Home() {
               </div>
               <div className="flex flex-col">
                 <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-                  Esta competição não é afiliada/patrocinada pela Riot Games, Inc. ou League of
-                  Legends/Teamfight Tactics Esports.
+                  Esta competição não é afiliada/patrocinada pela Riot Games,
+                  Inc. ou League of Legends/Teamfight Tactics Esports.
                 </p>
                 <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-4">
-                  &copy; 2023 Copa Recife de League of Legends. Todos os direitos
-                  reservados.
+                  &copy; 2023 Copa Recife de League of Legends. Todos os
+                  direitos reservados.
                 </p>
               </div>
             </div>
