@@ -1,13 +1,15 @@
 import ZedWallpaper from "../../assets/zed-wallpaper.jpg";
+import LowQualityZedWallpaper from "../../assets/low-quality-zed-wallpaper.jpeg";
 import {
   TrophyIcon,
   ShieldCheckIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
-import { SVGProps } from "react";
+import { SVGProps, useRef, useState } from "react";
 import { JSX } from "react/jsx-runtime";
 import BaseGamingLogo from "../../assets/base-gaming-logo.png";
 import QuadriframeLogo from "../../assets/quadriframe-logo.png";
+import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
 
 function Home() {
   const primaryFeatures = [
@@ -62,20 +64,74 @@ function Home() {
       },
     ],
   };
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const aboutDiv = useRef(null);
+
+  const handleAboutDivScroll = () => {
+    if (aboutDiv.current) {
+      const rect = (aboutDiv.current as any).getBoundingClientRect();
+      window.scrollTo({
+        top: rect.top + window.scrollY,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="w-full h-full">
       <div className="relative h-screen">
         <img
+          src={LowQualityZedWallpaper}
+          alt="Zed Wallpaper Low Quality"
+          className="w-screen h-screen object-cover object-center blur-sm"
+          style={{ filter: "blur(20px)" }}
+          onLoad={handleImageLoad}
+          draggable={false}
+        />
+        <img
           src={ZedWallpaper}
           alt="Zed Wallpaper"
-          className="w-screen h-screen object-cover object-center"
+          className={`absolute inset-0 w-full h-full object-cover object-center ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-500 ease-in-out`}
+          onLoad={handleImageLoad}
+          draggable={false}
         />
-        <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-100 flex items-center justify-center">
           <span className="text-white text-2xl px-4 font-bold text-center sm:text-4xl">
-            COPA RECIFE DE LEAGUE OF LEGENDS
+            <img
+              className="h-36 sm:h-64 object-contain animate-pulse"
+              src={CopaRecifeLogo}
+              alt="Logo da Copa Recife"
+              draggable={false}
+            />
+            <div className="flex mt-8 gap-x-4 justify-center items-center">
+              <button className="text-base lg:text-lg text-white font-bold py-2 px-4 rounded hover:text-indigo-400">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeAhNCcrLeccb5o26AdtojU9yVqAeGOMEjGoka8eMeEzss0Wg/viewform?usp=sf_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Inscreva-se
+                </a>
+              </button>
+              <button
+                className="text-base lg:text-lg text-white font-bold py-2 px-4 rounded hover:text-indigo-400"
+                onClick={handleAboutDivScroll}
+              >
+                Saiba Mais
+              </button>
+            </div>
           </span>
         </div>
-        <div className="mx-auto my-16 max-w-7xl px-6 lg:px-8 lg:my-24">
+        <div ref={aboutDiv} className="mb-16 lg:mb-24" />
+        <div className="mx-auto mb-16 max-w-7xl px-6 lg:px-8 lg:mb-24">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-400">
               Seja Bem-Vindo à Copa Recife de League of Legends!
