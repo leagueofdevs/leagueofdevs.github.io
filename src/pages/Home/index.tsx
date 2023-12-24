@@ -7,7 +7,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { SVGProps, useRef, useState } from "react";
 import { JSX } from "react/jsx-runtime";
-import BaseGamingLogo from "../../assets/base-gaming-logo.png";
 import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
 
@@ -97,9 +96,8 @@ function Home() {
         <img
           src={ZedWallpaper}
           alt="Zed Wallpaper"
-          className={`absolute inset-0 w-full h-full object-cover object-center ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-500 ease-in-out`}
+          className={`absolute inset-0 w-full h-full object-cover object-center ${imageLoaded ? "opacity-100" : "opacity-0"
+            } transition-opacity duration-500 ease-in-out`}
           onLoad={handleImageLoad}
           draggable={false}
         />
@@ -181,18 +179,6 @@ function Home() {
             Patrocinadores
           </h2>
           <div className="flex flex-col gap-y-12 justify-center items-center gap-x-12 lg:flex-row">
-            <img
-              className="max-h-12 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
-              src={BaseGamingLogo}
-              alt="Logo da BASE Gaming"
-              draggable={false}
-              onClick={() => {
-                window.open(
-                  "https://www.instagram.com/basegaminggg/",
-                  "_blank"
-                );
-              }}
-            />
             <img
               className="max-h-12 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
               src={QuadriframeLogo}
