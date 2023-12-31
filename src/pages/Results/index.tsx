@@ -8,30 +8,30 @@ function Results() {
   const tableItems = [
     {
       teamName: "CRV",
-      victories: 1,
-      loses: 2,
-      gamesPlayed: 3,
+      victories: 0,
+      loses: 0,
+      gamesPlayed: 0,
     },
     {
       teamName: "ETS",
       logoUrl: ETSLogo,
-      victories: 2,
-      loses: 1,
-      gamesPlayed: 3,
+      victories: 0,
+      loses: 0,
+      gamesPlayed: 0,
     },
     {
       teamName: "SHG",
       logoUrl: SHGLogo,
-      victories: 2,
-      loses: 1,
-      gamesPlayed: 3,
+      victories: 0,
+      loses: 0,
+      gamesPlayed: 0,
     },
     {
       teamName: "TVX",
       logoUrl: TVXLogo,
-      victories: 3,
+      victories: 0,
       loses: 0,
-      gamesPlayed: 3,
+      gamesPlayed: 0,
     },
   ];
 
