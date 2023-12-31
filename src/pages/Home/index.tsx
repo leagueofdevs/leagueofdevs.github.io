@@ -133,6 +133,12 @@ function Home() {
               >
                 Equipes
               </Link>
+              <Link
+                to="/resultados"
+                className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400"
+              >
+                Resultados
+              </Link>
             </div>
           </span>
         </div>
