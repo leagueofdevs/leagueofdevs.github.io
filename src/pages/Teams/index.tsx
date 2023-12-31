@@ -56,7 +56,7 @@ function Teams() {
   return (
     <div className="w-full h-full">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 py-12">
-        <nav className="text-white flex justify-start w-full gap-x-1">
+        <nav className="text-white flex justify-start w-full gap-x-1 mb-6">
           <Link to="/" className="hover:underline">
             Home
           </Link>
