@@ -96,8 +96,9 @@ function Home() {
         <img
           src={ZedWallpaper}
           alt="Zed Wallpaper"
-          className={`absolute inset-0 w-full h-full object-cover object-center ${imageLoaded ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-500 ease-in-out`}
+          className={`absolute inset-0 w-full h-full object-cover object-center ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-500 ease-in-out`}
           onLoad={handleImageLoad}
           draggable={false}
         />
