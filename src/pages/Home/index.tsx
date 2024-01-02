@@ -230,7 +230,7 @@ function Home() {
                   Inc. ou League of Legends/Teamfight Tactics Esports.
                 </p>
                 <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-4">
-                  &copy; 2023 Copa Recife de League of Legends. Todos os
+                  &copy; 2024 Copa Recife de League of Legends. Todos os
                   direitos reservados.
                 </p>
               </div>
