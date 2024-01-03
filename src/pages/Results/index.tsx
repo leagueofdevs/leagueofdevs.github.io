@@ -1,4 +1,5 @@
 import Breadcrumb from "../../components/Breadcrumb";
+import GroupStage from "../../components/GroupStage";
 import Table from "../../components/Table";
 import Footer from "../../components/Footer";
 import { teams } from "../../utils/constants";
@@ -20,7 +21,10 @@ function Results() {
             Veja os resultados atualizados da Copa Recife de League of Legends!
           </p>
         </div>
-        <Table items={teams} />
+        <div className="flex flex-col gap-y-8 w-full">
+          <GroupStage />
+          <Table items={teams} />
+        </div>
       </div>
       <Footer />
     </div>
