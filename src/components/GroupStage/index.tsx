@@ -41,7 +41,7 @@ function GroupStage() {
             <h4 className="round-title text-white font-bold text-xl mb-4">
               Rodada {round}
             </h4>
-            {Array.from({ length: 5 }).map((match, index) => (
+            {Array.from({ length: 5 }).map((_, index) => (
               <div
                 key={index}
                 className="match-card bg-gray-700 p-4 rounded-md flex items-center justify-between mb-2"
