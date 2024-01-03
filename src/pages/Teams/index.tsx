@@ -1,58 +1,8 @@
 import PlaceholderLogo from "../../assets/team-logos/placeholder.jpg";
-import TVXLogo from "../../assets/team-logos/TVX.jpg";
-import SHGLogo from "../../assets/team-logos/SHG.jpg";
-import ETSLogo from "../../assets/team-logos/ETS.png";
+import { teams } from "../../utils/constants";
 import { Link } from "react-router-dom";
 
 function Teams() {
-  const teams = [
-    {
-      name: "Cravy Brothers - CRV",
-      members: [
-        "Suzy Ritch#2001",
-        "Chaguibas#BR1",
-        "IgnisKnight#BR1",
-        "Кримсон#00000",
-        "Play Destroy#BR1",
-      ],
-    },
-    {
-      name: "Espectros Sombrios - ETS",
-      members: [
-        "DeuMoleÉVapo#5437",
-        "SKYNOUGTH#8455",
-        "HeitorFKzin#2486",
-        "LORD MONKUMA#1504",
-        "Y4NZA0#4796",
-      ],
-      logoUrl: ETSLogo,
-    },
-    {
-      name: "Shangai E-sports - SHG",
-      members: [
-        "Barbosa#081",
-        "px#0399",
-        "pauiinho#BR1",
-        "Veiga#1687",
-        "chína#BR1",
-        "Shwihawsh",
-      ],
-      logoUrl: SHGLogo,
-    },
-    {
-      name: "Team Vortex - TVX",
-      members: [
-        "poteito#1902",
-        "Orianna com TDAH#BR1",
-        "Khazix Raikage#BR1",
-        "rennanpo#BR1",
-        "Follpes#twitc",
-        "Raphinha uwu#BR1",
-      ],
-      logoUrl: TVXLogo,
-    },
-  ];
-
   return (
     <div className="w-full h-full">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 py-12">
