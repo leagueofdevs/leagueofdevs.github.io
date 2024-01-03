@@ -1,40 +1,8 @@
-import TVXLogo from "../../assets/team-logos/TVX.jpg";
-import SHGLogo from "../../assets/team-logos/SHG.jpg";
-import ETSLogo from "../../assets/team-logos/ETS.png";
+import { teams } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import Table from "../../components/Table";
 
 function Results() {
-  const tableItems = [
-    {
-      teamName: "CRV",
-      victories: 0,
-      loses: 0,
-      gamesPlayed: 0,
-    },
-    {
-      teamName: "ETS",
-      logoUrl: ETSLogo,
-      victories: 0,
-      loses: 0,
-      gamesPlayed: 0,
-    },
-    {
-      teamName: "SHG",
-      logoUrl: SHGLogo,
-      victories: 0,
-      loses: 0,
-      gamesPlayed: 0,
-    },
-    {
-      teamName: "TVX",
-      logoUrl: TVXLogo,
-      victories: 0,
-      loses: 0,
-      gamesPlayed: 0,
-    },
-  ];
-
   return (
     <div className="w-full h-full">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 py-12">
@@ -52,7 +20,7 @@ function Results() {
             Veja os resultados atualizados da Copa Recife de League of Legends!
           </p>
         </div>
-        <Table items={tableItems} />
+        <Table items={teams} />
       </div>
     </div>
   );
