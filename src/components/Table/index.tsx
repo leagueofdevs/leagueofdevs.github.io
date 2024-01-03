@@ -1,27 +1,13 @@
 import { useState, useEffect } from "react";
 import PlaceholderLogo from "../../assets/team-logos/placeholder.jpg";
+import { Team } from "../../types";
 
 export interface TableProps {
-  items: Array<{
-    acronym: string;
-    logoUrl?: string;
-    victories: number;
-    loses: number;
-    gamesPlayed: number;
-  }>;
+  items: Array<Team>;
 }
 
 function Table({ items }: TableProps) {
-  const [sortedItems, setSortedItems] = useState<
-    Array<{
-      acronym: string;
-      logoUrl?: string;
-      victories: number;
-      loses: number;
-      gamesPlayed: number;
-      position: number;
-    }>
-  >();
+  const [sortedItems, setSortedItems] = useState<Array<Team>>();
 
   useEffect(() => {
     const sorted = [...items].sort((a, b) => {
