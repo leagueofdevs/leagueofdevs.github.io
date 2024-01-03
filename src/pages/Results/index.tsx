@@ -1,7 +1,7 @@
-import { teams } from "../../utils/constants";
-import { Link } from "react-router-dom";
 import Table from "../../components/Table";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
+import { teams } from "../../utils/constants";
 
 function Results() {
   return (
