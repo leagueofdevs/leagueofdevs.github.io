@@ -3,7 +3,7 @@ import PlaceholderLogo from "../../assets/team-logos/placeholder.jpg";
 
 export interface TableProps {
   items: Array<{
-    teamName: string;
+    acronym: string;
     logoUrl?: string;
     victories: number;
     loses: number;
@@ -14,7 +14,7 @@ export interface TableProps {
 function Table({ items }: TableProps) {
   const [sortedItems, setSortedItems] = useState<
     Array<{
-      teamName: string;
+      acronym: string;
       logoUrl?: string;
       victories: number;
       loses: number;
@@ -28,7 +28,7 @@ function Table({ items }: TableProps) {
       if (b.victories !== a.victories) {
         return b.victories - a.victories;
       }
-      return a.teamName.localeCompare(b.teamName);
+      return a.acronym.localeCompare(b.acronym);
     });
 
     let position = 1;
@@ -100,7 +100,7 @@ function Table({ items }: TableProps) {
           {sortedItems &&
             sortedItems.map((item) => (
               <tr
-                key={item.teamName}
+                key={item.acronym}
                 className="transition-all hover:bg-gray-700 cursor-pointer transform hover:scale-95"
               >
                 <td className="py-3 pl-0 pr-1 text-center sm:pr-8 sm:text-center">
@@ -111,7 +111,7 @@ function Table({ items }: TableProps) {
                     {item.logoUrl ? (
                       <img
                         src={item.logoUrl}
-                        alt={`${item.teamName} logo`}
+                        alt={`${item.acronym} logo`}
                         draggable={false}
                         className="h-10 w-10 rounded-full"
                       />
@@ -124,7 +124,7 @@ function Table({ items }: TableProps) {
                       />
                     )}
                     <div className="truncate text-base font-medium leading-6 text-white">
-                      {item.teamName}
+                      {item.acronym}
                     </div>
                   </div>
                 </td>
