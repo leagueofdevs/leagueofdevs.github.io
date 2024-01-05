@@ -142,6 +142,7 @@ export const teams: Array<Team> = [
       "Lisozo#BR11",
       "rOkz#BR1",
       "AFC Gemir 10#luna",
+      "Maciel 07 #BR1",
     ],
     acronym: "LSG",
     logoUrl: LSGLogo,
