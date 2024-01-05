@@ -1,4 +1,5 @@
 import { Team } from "../types";
+import AGBLogo from "../assets/team-logos/AGB.jpeg";
 import ABKLogo from "../assets/team-logos/ABK.png";
 import ADFLogo from "../assets/team-logos/ADF.jpeg";
 import BHELogo from "../assets/team-logos/BHE.png";
@@ -23,6 +24,7 @@ export const teams: Array<Team> = [
       "Focalor#one",
     ],
     acronym: "AGB",
+    logoUrl: AGBLogo,
     victories: 0,
     loses: 0,
     gamesPlayed: 0,
@@ -142,7 +144,7 @@ export const teams: Array<Team> = [
       "Lisozo#BR11",
       "rOkz#BR1",
       "AFC Gemir 10#luna",
-      "Maciel 07 #BR1",
+      "Maciel 07#BR1",
     ],
     acronym: "LSG",
     logoUrl: LSGLogo,
