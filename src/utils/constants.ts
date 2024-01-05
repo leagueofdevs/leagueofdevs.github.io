@@ -234,32 +234,32 @@ export const rounds = [
     startAt: "06/01 a partir das 9h",
     matches: [
       {
-        team1: "IDL",
-        team2: "DRX",
-        winner: "",
-      },
-      {
         team1: "BHE",
-        team2: "QUE",
+        team2: "ETS",
         winner: "",
       },
       {
-        team1: "SHG",
+        team1: "TVX",
+        team2: "TBS",
+        winner: "",
+      },
+      {
+        team1: "QUE",
+        team2: "SHG",
+        winner: "",
+      },
+      {
+        team1: "CRV",
+        team2: "ABK",
+        winner: "",
+      },
+      {
+        team1: "IDL",
         team2: "LSG",
         winner: "",
       },
-      {
-        team1: "ETS",
-        team2: "TLD",
-        winner: "",
-      },
-      {
-        team1: "TBS",
-        team2: "TVX",
-        winner: "",
-      },
-      { team1: "ABK", team2: "CRV", winner: "" },
-      { team1: "ADF", team2: "AGB", winner: "" },
+      { team1: "TLD", team2: "ADF", winner: "" },
+      { team1: "DRX", team2: "AGB", winner: "" },
     ],
   },
   {
