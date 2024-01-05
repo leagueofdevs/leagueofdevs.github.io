@@ -134,7 +134,7 @@ function GroupStage() {
                         />
                       )}
                       <span
-                        className={`team-name text-white ${
+                        className={`team-name ${
                           match.winner === match.team1
                             ? "text-green-500"
                             : match.winner !== "" && "text-red-500"
@@ -169,7 +169,7 @@ function GroupStage() {
                         />
                       )}
                       <span
-                        className={`team-name text-white ${
+                        className={`team-name ${
                           match.winner === match.team2
                             ? "text-green-500"
                             : match.winner !== "" && "text-red-500"
