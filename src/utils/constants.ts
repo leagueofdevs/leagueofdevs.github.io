@@ -264,11 +264,11 @@ export const rounds = [
   },
   {
     toBeDetermined: true,
-    startAt: "06/01 A partir das 9h",
+    startAt: "06/01 a partir das 9h",
   },
   {
     toBeDetermined: true,
-    startAt: "06/01 A partir das 9h",
+    startAt: "06/01 a partir das 9h",
   },
   {
     toBeDetermined: true,
