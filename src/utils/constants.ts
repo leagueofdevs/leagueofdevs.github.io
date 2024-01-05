@@ -1,21 +1,38 @@
 import { Team } from "../types";
 import ABKLogo from "../assets/team-logos/ABK.png";
 import ADFLogo from "../assets/team-logos/ADF.jpeg";
+import BHELogo from "../assets/team-logos/BHE.png";
 import DRXLogo from "../assets/team-logos/DRX.jpeg";
 import ETSLogo from "../assets/team-logos/ETS.png";
 import IDLLogo from "../assets/team-logos/IDL.png";
+import LSGLogo from "../assets/team-logos/LSG.jpg";
 import QUELogo from "../assets/team-logos/QUE.png";
 import SHGLogo from "../assets/team-logos/SHG.jpg";
 import TVXLogo from "../assets/team-logos/TVX.jpg";
 import TLDLogo from "../assets/team-logos/TLD.png";
+import TBSLogo from "../assets/team-logos/TBS.jpeg";
 
 export const teams: Array<Team> = [
   {
+    name: "AdirGomes Banda - AGB",
+    members: [
+      "Yami#BR2",
+      "xubirabirou#buu",
+      "Yuta#無量空処",
+      "phone numbers#BR1",
+      "Focalor#one",
+    ],
+    acronym: "AGB",
+    victories: 0,
+    loses: 0,
+    gamesPlayed: 0,
+  },
+  {
     name: "ALL BLACKS - ABK",
     members: [
-      "nasus canadense#BR1",
       "Ggz1n#ggzao",
       "Leirbag#3531",
+      "nasus canadense#BR1/Zac",
       "Twtv Memotiva#BR1",
       "TSX LouiS#BR1",
     ],
@@ -36,6 +53,21 @@ export const teams: Array<Team> = [
     ],
     acronym: "ADF",
     logoUrl: ADFLogo,
+    victories: 0,
+    loses: 0,
+    gamesPlayed: 0,
+  },
+  {
+    name: "Banhado em Euros - BHE",
+    members: [
+      "snt#최고왕",
+      "Missionario#123",
+      "Kaйo#DATDP/Irelia ",
+      "Slash#1305",
+      "politik#BR1",
+    ],
+    acronym: "BHE",
+    logoUrl: BHELogo,
     victories: 0,
     loses: 0,
     gamesPlayed: 0,
@@ -62,6 +94,7 @@ export const teams: Array<Team> = [
       "Edisu#BR1",
       "Thawne#5616",
       "Michaeljckson420#BR1",
+      "Smoker Shelby#BR1",
     ],
     acronym: "DRX",
     logoUrl: DRXLogo,
@@ -100,6 +133,23 @@ export const teams: Array<Team> = [
     gamesPlayed: 0,
   },
   {
+    name: "Light Storm Gaming - LSG",
+    members: [
+      "Reni#fofo",
+      "72K#BR1",
+      "Mosca#0kill",
+      "fiscal contabil#lindo",
+      "Lisozo#BR11",
+      "rOkz#BR1",
+      "AFC Gemir 10#luna",
+    ],
+    acronym: "LSG",
+    logoUrl: LSGLogo,
+    victories: 0,
+    loses: 0,
+    gamesPlayed: 0,
+  },
+  {
     name: "Que passeio - QUE",
     members: [
       "Digs#nick",
@@ -123,7 +173,6 @@ export const teams: Array<Team> = [
       "pauiinho#BR1",
       "Veiga#1687",
       "chína#BR1",
-      "Shwihawsh",
     ],
     acronym: "SHG",
     logoUrl: SHGLogo,
@@ -161,5 +210,76 @@ export const teams: Array<Team> = [
     victories: 0,
     loses: 0,
     gamesPlayed: 0,
+  },
+  {
+    name: "The boys - TBS",
+    members: [
+      "Rétsu#BR1",
+      "Äspëct#157/Zoe",
+      "BlG KONG#BR1",
+      "The boy Uchiha#BR1",
+      "ADC BEST GAP#BR1",
+    ],
+    acronym: "TBS",
+    logoUrl: TBSLogo,
+    victories: 0,
+    loses: 0,
+    gamesPlayed: 0,
+  },
+];
+
+export const rounds = [
+  {
+    toBeDetermined: false,
+    startAt: "06/01 às 11h",
+    matches: [
+      {
+        team1: "IDL",
+        team2: "DRX",
+        winner: "DRX",
+      },
+      {
+        team1: "BHE",
+        team2: "QUE",
+        winner: "",
+      },
+      {
+        team1: "SHG",
+        team2: "LSG",
+        winner: "",
+      },
+      {
+        team1: "ETS",
+        team2: "TLD",
+        winner: "",
+      },
+      {
+        team1: "TBS",
+        team2: "TVX",
+        winner: "",
+      },
+      { team1: "ABK", team2: "CRV", winner: "" },
+      { team1: "ADF", team2: "AGB", winner: "" },
+    ],
+  },
+  {
+    toBeDetermined: true,
+    startAt: "06/01 às 14h",
+  },
+  {
+    toBeDetermined: true,
+    startAt: "06/01 às 16h",
+  },
+  {
+    toBeDetermined: true,
+    startAt: "07/01 às 11h",
+  },
+  {
+    toBeDetermined: true,
+    startAt: "07/01 às 14h",
+  },
+  {
+    toBeDetermined: true,
+    startAt: "07/01 às 16h",
   },
 ];
