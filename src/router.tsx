@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Teams from "./pages/Teams";
-import Results from "./pages/Results";
+import Matches from "./pages/Matches";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/equipes", element: <Teams /> },
-  { path: "/resultados", element: <Results /> },
+  { path: "/confrontos", element: <Matches /> },
 ]);
 
 export default router;
