@@ -1,10 +1,6 @@
 import ZedWallpaper from "../../assets/zed-wallpaper.jpg";
 import LowQualityZedWallpaper from "../../assets/low-quality-zed-wallpaper.jpeg";
-import {
-  TrophyIcon,
-  ShieldCheckIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
+import { TrophyIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
 import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
