@@ -34,11 +34,29 @@ function TeamsList({ teams }: TeamsListProps) {
           <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">
             {team.name}
           </h3>
-          {team.members.map((member) => (
-            <p key={member} className="text-sm leading-6 text-gray-400">
-              {member}
-            </p>
-          ))}
+          {team.members.map((memberName) => {
+            const memberNameSplit = memberName.includes("/")
+              ? memberName.split("/")[0]
+              : memberName;
+            const championName = memberName.includes("/")
+              ? memberName.split("/")[1]
+              : "";
+
+            return (
+              <p
+                key={memberNameSplit}
+                className="text-sm leading-6 text-gray-400 flex items-center justify-center gap-x-1 w-full"
+              >
+                {memberNameSplit}
+                {championName && (
+                  <div className="flex bg-indigo-500 rounded-lg p-1 justify-end gap-x-1">
+                    <span className="text-gray-300">Mono</span>
+                    <span className="text-gray-300">{championName}</span>
+                  </div>
+                )}
+              </p>
+            );
+          })}
         </li>
       ))}
     </ul>
