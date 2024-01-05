@@ -231,7 +231,7 @@ export const teams: Array<Team> = [
 export const rounds = [
   {
     toBeDetermined: false,
-    startAt: "06/01 A partir das 9h",
+    startAt: "06/01 a partir das 9h",
     matches: [
       {
         team1: "IDL",
