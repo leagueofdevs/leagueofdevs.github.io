@@ -14,26 +14,19 @@ import Footer from "../../components/Footer";
 function Home() {
   const primaryFeatures = [
     {
-      name: "Domine os Campos de Batalha",
+      name: "Sintonize na Ação ao Vivo",
       description:
-        "As inscrições para a Copa Recife de League of Legends começam em 03/12/2023. Não perca a oportunidade de mostrar suas habilidades no universo competitivo. Reúna sua equipe, consulte o regulamento e não perca a chance de se tornar um campeão!",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSeAhNCcrLeccb5o26AdtojU9yVqAeGOMEjGoka8eMeEzss0Wg/viewform?usp=sf_link",
-      buttonText: "Inscreva-se",
+        "As inscrições para a Copa Recife de League of Legends já se encerraram, mas a ação está apenas começando! Sintonize no nosso canal da Twitch a partir do dia 6 de janeiro de 2024 às 11h da manhã para testemunhar as batalhas épicas que definirão o grande campeão. Prepare-se para a emoção,  junte-se a nós ao vivo na Twitch!",
+      href: "https://www.twitch.tv/coparecifedelol",
+      buttonText: "Assista ao Vivo",
       icon: TrophyIcon,
     },
     {
-      name: "Quem Pode Participar",
+      name: "Confira o Regulamento",
       description:
-        "Todos são bem-vindos! Não importa se você é um jogador experiente ou se está começando agora no universo de Summoner's Rift. Na Copa Recife, a diversão e a competição andam lado a lado. Envolva-se, faça novos amigos e mergulhe na emoção de disputar partidas épicas!",
+        "Queremos que você esteja por dentro de todas as estratégias, regras e reviravoltas emocionantes. Não deixe passar a oportunidade de entender os detalhes que fazem cada partida ser única. Dê uma olhada em nosso Regulamento Oficial, mergulhe nas nuances do torneio e esteja totalmente preparado para a ação. A vitória começa com o conhecimento!",
       href: "https://docs.google.com/document/d/1jzkpLS9lJo9ZsQtC4ZmpgbJ33VHD1CrmiPXZLHGtGJs/edit?pli=1",
-      buttonText: "Veja o Regulamento Oficial",
-      icon: UsersIcon,
-    },
-    {
-      name: "Proteção para Monochampions",
-      description:
-        "Entendemos que cada jogador tem seu próprio estilo único. Se você é um monochampion dedicado, oferecemos condições especiais para você! Queremos que todos os monochampions se sintam valorizados e apoiados ao entrarem no cenário competitivo do nosso amado LoLzinho. Venha mostrar suas habilidades e celebrar a diversidade de estratégias no campo de batalha!",
-      href: "#",
+      buttonText: "Explore o Regulamento Agora",
       icon: ShieldCheckIcon,
     },
   ];
@@ -85,15 +78,6 @@ function Home() {
               draggable={false}
             />
             <div className="flex mt-8 gap-x-4 justify-center items-center flex-col">
-              <button className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeAhNCcrLeccb5o26AdtojU9yVqAeGOMEjGoka8eMeEzss0Wg/viewform?usp=sf_link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Inscreva-se
-                </a>
-              </button>
               <button
                 className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400"
                 onClick={handleAboutDivScroll}
@@ -107,10 +91,10 @@ function Home() {
                 Equipes
               </Link>
               <Link
-                to="/resultados"
+                to="/confrontos"
                 className="text-base lg:text-lg text-white font-bold px-4 rounded hover:text-indigo-400"
               >
-                Resultados
+                Confrontos
               </Link>
             </div>
           </span>
@@ -129,7 +113,7 @@ function Home() {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
               {primaryFeatures.map((feature) => (
                 <div key={feature.name} className="flex flex-col">
                   <dt className="text-base font-semibold leading-7 text-white">
