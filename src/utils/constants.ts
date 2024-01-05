@@ -236,7 +236,7 @@ export const rounds = [
       {
         team1: "IDL",
         team2: "DRX",
-        winner: "DRX",
+        winner: "",
       },
       {
         team1: "BHE",
