@@ -2,8 +2,9 @@ import ZedWallpaper from "../../assets/zed-wallpaper.jpg";
 import LowQualityZedWallpaper from "../../assets/low-quality-zed-wallpaper.jpeg";
 import { TrophyIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
-import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
+import CoffeeGankLogo from "../../assets/coffee-gank-logo.png";
+import QuadriframeLogo from "../../assets/quadriframe-logo.png";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 
@@ -146,6 +147,15 @@ function Home() {
             Patrocinadores
           </h2>
           <div className="flex flex-col gap-y-12 justify-center items-center gap-x-12 lg:flex-row">
+            <img
+              className="max-h-28 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+              src={CoffeeGankLogo}
+              alt="Logo do Coffee Gank"
+              draggable={false}
+              onClick={() => {
+                window.open("https://www.instagram.com/coffee_gank/", "_blank");
+              }}
+            />
             <img
               className="max-h-12 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
               src={QuadriframeLogo}
