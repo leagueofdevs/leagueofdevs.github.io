@@ -109,7 +109,7 @@ export const teams: Array<Team> = [
     members: [
       "DeuMoleÉVapo#5437",
       "SKYNOUGTH#8455",
-      "HeitorFKzin#2486",
+      "Dracariu#007",
       "LORD MONKUMA#1504",
       "Y4NZA0#4796",
     ],
