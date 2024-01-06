@@ -87,8 +87,8 @@ export const teams: Array<Team> = [
     acronym: "CRV",
     logoUrl: CRVLogo,
     victories: 0,
-    loses: 1,
-    gamesPlayed: 1,
+    loses: 2,
+    gamesPlayed: 2,
   },
   {
     name: "Dragon Rage X - DRX",
