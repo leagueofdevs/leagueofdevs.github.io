@@ -70,9 +70,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "BHE",
     logoUrl: BHELogo,
-    victories: 0,
+    victories: 1,
     loses: 0,
-    gamesPlayed: 0,
+    gamesPlayed: 1,
   },
   {
     name: "Cravy Brothers - CRV",
@@ -116,8 +116,8 @@ export const teams: Array<Team> = [
     acronym: "ETS",
     logoUrl: ETSLogo,
     victories: 0,
-    loses: 0,
-    gamesPlayed: 0,
+    loses: 1,
+    gamesPlayed: 1,
   },
   {
     name: "Inter de Limão - IDL",
