@@ -3,6 +3,7 @@ import AGBLogo from "../assets/team-logos/AGB.jpeg";
 import ABKLogo from "../assets/team-logos/ABK.png";
 import ADFLogo from "../assets/team-logos/ADF.jpeg";
 import BHELogo from "../assets/team-logos/BHE.png";
+import CRVLogo from "../assets/team-logos/CRV.jpg";
 import DRXLogo from "../assets/team-logos/DRX.jpeg";
 import ETSLogo from "../assets/team-logos/ETS.png";
 import IDLLogo from "../assets/team-logos/IDL.png";
@@ -84,6 +85,7 @@ export const teams: Array<Team> = [
       "Play Destroy#BR1",
     ],
     acronym: "CRV",
+    logoUrl: CRVLogo,
     victories: 0,
     loses: 1,
     gamesPlayed: 1,
@@ -293,6 +295,11 @@ export const rounds = [
       {
         team1: "CRV",
         team2: "TVX",
+        winner: "",
+      },
+      {
+        team1: "TBD",
+        team2: "TBD",
         winner: "",
       },
     ],
