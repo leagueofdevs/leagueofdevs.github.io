@@ -295,6 +295,7 @@ export const rounds = [
         winner: "",
       },
       { team1: "QUE", team2: "DRX", winner: "QUE" },
+      { team1: "TBD", team2: "TBD", winner: "" },
     ],
   },
   {
