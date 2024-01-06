@@ -266,8 +266,36 @@ export const rounds = [
     ],
   },
   {
-    toBeDetermined: true,
+    toBeDetermined: false,
     startAt: "06/01 a partir das 9h",
+    matches: [
+      {
+        team1: "ETS",
+        team2: "QUE",
+        winner: "QUE",
+      },
+      {
+        team1: "LSG",
+        team2: "TLD",
+        winner: "",
+      },
+      {
+        team1: "CRB",
+        team2: "TVX",
+        winner: "",
+      },
+      {
+        team1: "ABK",
+        team2: "SHG",
+        winner: "SHG",
+      },
+      {
+        team1: "ADF",
+        team2: "IDL",
+        winner: "",
+      },
+      { team1: "QUE", team2: "DRX", winner: "QUE" },
+    ],
   },
   {
     toBeDetermined: true,
