@@ -34,9 +34,8 @@ function GroupStage() {
           <div className="flex items-center justify-between p-4 bg-indigo-500 text-white rounded-lg">
             <p className="text-sm font-medium">
               <span className="font-bold">Nota:</span> TBD (To Be Determined) -
-              A ser definido. Os confrontos da primeira rodada já foram
-              definidos; os demais serão determinados com base nos resultados
-              dos jogos!
+              A ser definido. Fique ligado nas próximas partidas para saber
+              quais times irão se enfrentar!
             </p>
             <button
               type="button"
@@ -55,7 +54,7 @@ function GroupStage() {
             className="round-container bg-gray-800 p-4 rounded-lg mb-6 w-full transform transition-transform duration-300 hover:scale-105"
           >
             <h4 className="round-title text-white font-bold text-xl">
-              Rodada {index + 1}
+              Partidas
             </h4>
             <div className="w-full flex gap-x-1 items-center text-gray-400 text-base mb-4 justify-center">
               {round.startAt} - Ao vivo na
