@@ -197,9 +197,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "TVX",
     logoUrl: TVXLogo,
-    victories: 0,
+    victories: 1,
     loses: 1,
-    gamesPlayed: 1,
+    gamesPlayed: 2,
   },
   {
     name: "Time Liquido - TLD",
