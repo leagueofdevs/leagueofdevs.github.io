@@ -277,12 +277,7 @@ export const rounds = [
       {
         team1: "LSG",
         team2: "TLD",
-        winner: "",
-      },
-      {
-        team1: "CRB",
-        team2: "TVX",
-        winner: "",
+        winner: "LSG",
       },
       {
         team1: "ABK",
@@ -292,10 +287,14 @@ export const rounds = [
       {
         team1: "ADF",
         team2: "IDL",
-        winner: "",
+        winner: "IDL",
       },
       { team1: "QUE", team2: "DRX", winner: "QUE" },
-      { team1: "TBD", team2: "TBD", winner: "" },
+      {
+        team1: "CRV",
+        team2: "TVX",
+        winner: "",
+      },
     ],
   },
   {
