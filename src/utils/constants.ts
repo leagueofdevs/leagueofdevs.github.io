@@ -27,8 +27,8 @@ export const teams: Array<Team> = [
     acronym: "AGB",
     logoUrl: AGBLogo,
     victories: 0,
-    loses: 1,
-    gamesPlayed: 1,
+    loses: 2,
+    gamesPlayed: 2,
   },
   {
     name: "ALL BLACKS - ABK",
@@ -132,9 +132,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "IDL",
     logoUrl: IDLLogo,
-    victories: 2,
+    victories: 3,
     loses: 0,
-    gamesPlayed: 2,
+    gamesPlayed: 3,
   },
   {
     name: "Light Storm Gaming - LSG",
@@ -299,8 +299,8 @@ export const rounds = [
       },
       {
         team1: "IDL",
-        team2: "LSG",
-        winner: "",
+        team2: "AGB",
+        winner: "IDL",
       },
     ],
   },
