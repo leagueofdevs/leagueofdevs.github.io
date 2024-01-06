@@ -259,10 +259,10 @@ export const rounds = [
       {
         team1: "IDL",
         team2: "LSG",
-        winner: "",
+        winner: "IDL",
       },
       { team1: "TLD", team2: "ADF", winner: "ADF" },
-      { team1: "DRX", team2: "AGB", winner: "" },
+      { team1: "DRX", team2: "AGB", winner: "DRX" },
     ],
   },
   {
