@@ -239,7 +239,7 @@ export const rounds = [
       {
         team1: "BHE",
         team2: "ETS",
-        winner: "",
+        winner: "BHE",
       },
       {
         team1: "TVX",
