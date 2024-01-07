@@ -27,8 +27,8 @@ export const teams: Array<Team> = [
     acronym: "AGB",
     logoUrl: AGBLogo,
     victories: 0,
-    loses: 3,
-    gamesPlayed: 3,
+    loses: 4,
+    gamesPlayed: 4,
   },
   {
     name: "ALL BLACKS - ABK",
