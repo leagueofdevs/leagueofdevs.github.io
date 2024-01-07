@@ -14,16 +14,18 @@ function Table({ items }: TableProps) {
       if (b.victories !== a.victories) {
         return b.victories - a.victories;
       }
-      return a.acronym.localeCompare(b.acronym);
+      return a.loses - b.loses;
     });
 
     let position = 1;
     let lastVictories = sorted[0].victories;
+    let lastLoses = sorted[0].loses;
 
     const itemsWithPosition = sorted.map((item) => {
-      if (item.victories !== lastVictories) {
+      if (item.victories !== lastVictories || item.loses !== lastLoses) {
         position++;
         lastVictories = item.victories;
+        lastLoses = item.loses;
       }
 
       return {
