@@ -227,9 +227,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "TBS",
     logoUrl: TBSLogo,
-    victories: 2,
-    loses: 1,
-    gamesPlayed: 3,
+    victories: 3,
+    loses: 2,
+    gamesPlayed: 5,
   },
 ];
 
