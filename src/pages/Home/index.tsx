@@ -1,10 +1,11 @@
 import ZedWallpaper from "../../assets/zed-wallpaper.jpg";
 import LowQualityZedWallpaper from "../../assets/low-quality-zed-wallpaper.jpeg";
-import { TrophyIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
+import { TrophyIcon, ShieldCheckIcon, FireIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
 import CopaRecifeLogo from "../../assets/copa-recife-logo.png";
-import CoffeeGankLogo from "../../assets/coffee-gank-logo.png";
-import QuadriframeLogo from "../../assets/quadriframe-logo.png";
+import SAGALogo from "../../assets/sponsors/saga-logo.png";
+import CoffeeGankLogo from "../../assets/sponsors/coffee-gank-logo.png";
+import QuadriframeLogo from "../../assets/sponsors/quadriframe-logo.png";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 
@@ -26,6 +27,14 @@ function Home() {
       buttonText: "Explore o Regulamento Agora",
       icon: ShieldCheckIcon,
     },
+    {
+      name: "Conheça a SAGA",
+      description:
+        "Adentre o universo extraordinário da SAGA, nossa parceira de excelência digital. Sinta a emoção das semifinais e da final presencial em 14 de janeiro, imerso na atmosfera única que só a SAGA pode proporcionar! Descubra o poder da SAGA, a maior comunidade criativa da América Latina. Com 200 mil talentos formados, a essência da arte digital. Acesse o site e conheça mais sobre a SAGA!",
+      href: "https://www.saga.com.br/",
+      buttonText: "Conheça a SAGA",
+      icon: FireIcon,
+    }
   ];
 
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -110,7 +119,7 @@ function Home() {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {primaryFeatures.map((feature) => (
                 <div key={feature.name} className="flex flex-col">
                   <dt className="text-base font-semibold leading-7 text-white">
@@ -146,6 +155,15 @@ function Home() {
           <h2 className="text-center text-lg font-semibold leading-8 text-white">
             Patrocinadores
           </h2>
+          <img
+            className="max-h-28 lg:max-h-36 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+            src={SAGALogo}
+            alt="Logo da SAGA"
+            draggable={false}
+            onClick={() => {
+              window.open("https://www.instagram.com/escolasaga/", "_blank");
+            }}
+          />
           <div className="flex flex-col gap-y-12 justify-center items-center gap-x-12 lg:flex-row">
             <img
               className="max-h-28 object-contain hover:opacity-50 transition-opacity duration-300 cursor-pointer"
