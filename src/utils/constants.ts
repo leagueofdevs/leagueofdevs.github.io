@@ -181,9 +181,9 @@ export const teams: Array<Team> = [
     ],
     acronym: "SHG",
     logoUrl: SHGLogo,
-    victories: 5,
+    victories: 6,
     loses: 0,
-    gamesPlayed: 5,
+    gamesPlayed: 6,
   },
   {
     name: "Team Vortex - TVX",
@@ -228,8 +228,8 @@ export const teams: Array<Team> = [
     acronym: "TBS",
     logoUrl: TBSLogo,
     victories: 3,
-    loses: 2,
-    gamesPlayed: 5,
+    loses: 3,
+    gamesPlayed: 6,
   },
 ];
 
@@ -384,7 +384,7 @@ export const rounds = [
       { team1: "AGB", team2: "BHE", winner: "BHE" },
       { team1: "CRV", team2: "ADF", winner: "CRV" },
       { team1: "BHE", team2: "DRX", winner: "BHE" },
-      { team1: "TBS", team2: "SHG", winner: "" },
+      { team1: "TBS", team2: "SHG", winner: "SHG" },
       { team1: "DRX", team2: "ABK", winner: "DRX" },
     ],
   },
