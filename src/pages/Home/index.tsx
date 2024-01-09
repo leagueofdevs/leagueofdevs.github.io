@@ -28,7 +28,7 @@ function Home() {
       icon: ShieldCheckIcon,
     },
     {
-      name: "Conheça a SAGA",
+      name: "Descubra o poder da SAGA",
       description:
         "Adentre o universo extraordinário da SAGA, nossa parceira de excelência digital. Sinta a emoção das semifinais e da final presencial em 14 de janeiro, imerso na atmosfera única que só a SAGA pode proporcionar! Descubra o poder da SAGA, a maior comunidade criativa da América Latina. Com 200 mil talentos formados, a essência da arte digital. Acesse o site e conheça mais sobre a SAGA!",
       href: "https://www.saga.com.br/",
