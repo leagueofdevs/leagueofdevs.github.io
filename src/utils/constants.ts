@@ -96,7 +96,7 @@ export const teams: Array<Team> = [
       "SafinhoPower#BR1",
       "Tongsi#dor",
       "Edisu#BR1",
-      "Thawne#5616",
+      "Baunce #BR1",
       "Michaeljckson420#BR1",
       "Smoker Shelby#BR1",
     ],
