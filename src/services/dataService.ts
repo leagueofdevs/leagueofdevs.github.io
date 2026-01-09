@@ -1,6 +1,8 @@
 import Papa from 'papaparse';
 import { Team, Round, Match } from '../types';
 
+const teamLogos = import.meta.glob('../assets/team-logos/*.{png,jpg,jpeg,svg}', { eager: true });
+
 const TEAMS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4qBk403Kau0N0B8KlYHnHV4MSYYonQR6mwZqa7bqhU72xDOc9huu1lSYZLTq4gOu-B-08IASUXQDg/pub?gid=0&single=true&output=csv';
 const MATCHES_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4qBk403Kau0N0B8KlYHnHV4MSYYonQR6mwZqa7bqhU72xDOc9huu1lSYZLTq4gOu-B-08IASUXQDg/pub?gid=1943059921&single=true&output=csv';
 
@@ -60,10 +62,21 @@ export const fetchTournamentData = async () => {
         }
     }
 
+    let logoUrl = row.Logo;
+    if (logoUrl && !logoUrl.startsWith('http')) {
+        const cleanName = logoUrl.split('/').pop();
+        for (const path in teamLogos) {
+            if (path.includes(cleanName!)) {
+                logoUrl = (teamLogos[path] as any).default;
+                break;
+            }
+        }
+    }
+
     return {
         name: row.Nome,
         acronym: row.Sigla,
-        logoUrl: row.Logo,
+        logoUrl: logoUrl,
         victories: parseInt(row.Vitorias) || 0,
         loses: parseInt(row.Derrotas) || 0,
         gamesPlayed: (parseInt(row.Vitorias) || 0) + (parseInt(row.Derrotas) || 0),
