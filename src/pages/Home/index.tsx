@@ -21,7 +21,7 @@ function Home() {
       name: "Confira o Regulamento",
       description:
         "Queremos que você esteja por dentro de todas as estratégias, regras e reviravoltas emocionantes. Não deixe passar a oportunidade de entender os detalhes que fazem cada partida ser única. Dê uma olhada em nosso Regulamento Oficial, mergulhe nas nuances do torneio e esteja totalmente preparado para a ação. A vitória começa com o conhecimento!",
-      href: "https://docs.google.com/document/d/1jzkpLS9lJo9ZsQtC4ZmpgbJ33VHD1CrmiPXZLHGtGJs/edit?pli=1",
+      href: "https://docs.google.com/document/d/1AKejnXnZYQqbBYoCb79C4ixxpt15z1SHMqP0JFr82WU/edit?tab=t.0",
       buttonText: "Explore o Regulamento Agora",
       icon: ShieldCheckIcon,
     },
