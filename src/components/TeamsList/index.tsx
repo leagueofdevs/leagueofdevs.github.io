@@ -1,5 +1,5 @@
 import { Team } from "../../types";
-import PlaceholderLogo from "../../assets/team-logos/placeholder.jpg";
+import PlaceholderLogo from "../../assets/copa-recife-logo.png";
 
 export interface TeamsListProps {
   teams: Array<Team>;

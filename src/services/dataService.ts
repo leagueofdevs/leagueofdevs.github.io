@@ -63,7 +63,24 @@ export const fetchTournamentData = async () => {
     }
 
     let logoUrl = row.Logo;
-    if (logoUrl && !logoUrl.startsWith('http')) {
+    let localLogoFound = false;
+
+    // 1. Try to find local logo by Sigla
+    if (row.Sigla) {
+        for (const path in teamLogos) {
+            const fileName = path.split('/').pop();
+            const nameWithoutExt = fileName?.substring(0, fileName.lastIndexOf('.'));
+            
+            if (nameWithoutExt === row.Sigla) {
+                logoUrl = (teamLogos[path] as any).default;
+                localLogoFound = true;
+                break;
+            }
+        }
+    }
+
+    // 2. If not found by Sigla, try to use row.Logo as a filename match (legacy/fallback)
+    if (!localLogoFound && logoUrl && !logoUrl.startsWith('http')) {
         const cleanName = logoUrl.split('/').pop();
         for (const path in teamLogos) {
             if (path.includes(cleanName!)) {

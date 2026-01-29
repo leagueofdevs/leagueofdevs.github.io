@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PlaceholderLogo from "../../assets/team-logos/placeholder.jpg";
+import PlaceholderLogo from "../../assets/copa-recife-logo.png";
 import { Team } from "../../types";
 
 export interface TableProps {
