@@ -28,20 +28,39 @@ const createTBDMatches = (count: number) => Array.from({ length: count }, () => 
     winner: ""
 }));
 
-const DEFAULT_ROUNDS: Round[] = [
-  { name: "Rodada 1", matches: createTBDMatches(8), toBeDetermined: true },
-  { name: "Rodada 2 (1-0)", matches: createTBDMatches(4), toBeDetermined: true },
-  { name: "Rodada 2 (0-1)", matches: createTBDMatches(4), toBeDetermined: true },
-  { name: "Rodada 3 (2-0)", matches: createTBDMatches(2), toBeDetermined: true },
-  { name: "Rodada 3 (1-1)", matches: createTBDMatches(4), toBeDetermined: true },
-  { name: "Rodada 3 (0-2)", matches: createTBDMatches(2), toBeDetermined: true },
-  { name: "Rodada 4 (2-1)", matches: createTBDMatches(3), toBeDetermined: true },
-  { name: "Rodada 4 (1-2)", matches: createTBDMatches(3), toBeDetermined: true },
-  { name: "Rodada 5 (2-2)", matches: createTBDMatches(3), toBeDetermined: true },
-  { name: "Quartas de Final", matches: createTBDMatches(4), toBeDetermined: true },
-  { name: "Semifinal", matches: createTBDMatches(2), toBeDetermined: true },
-  { name: "Final", matches: createTBDMatches(1), toBeDetermined: true },
-];
+const generateStructure = (count: number): Round[] => {
+    const rounds: Round[] = [];
+    const matchesPerRound = Math.ceil(count / 2);
+
+    // Dynamic Swiss Rounds Count
+    // 7-10 teams: 4 Rounds
+    // 11+ teams: 5 Rounds
+    const swissRoundsCount = count <= 10 ? 4 : 5;
+    
+    for (let i = 1; i <= swissRoundsCount; i++) {
+        rounds.push({
+            name: `Rodada ${i}`,
+            matches: createTBDMatches(matchesPerRound),
+            toBeDetermined: true
+        });
+    }
+
+    // Dynamic Playoffs
+    if (count <= 9) {
+        // Top 6 Format (Byes for Top 2)
+        // Quartas: 3rd vs 6th, 4th vs 5th (2 matches)
+        rounds.push({ name: "Quartas de Final", matches: createTBDMatches(2), toBeDetermined: true });
+        rounds.push({ name: "Semifinal", matches: createTBDMatches(2), toBeDetermined: true });
+        rounds.push({ name: "Final", matches: createTBDMatches(1), toBeDetermined: true });
+    } else {
+        // Standard Top 8 Format
+        rounds.push({ name: "Quartas de Final", matches: createTBDMatches(4), toBeDetermined: true });
+        rounds.push({ name: "Semifinal", matches: createTBDMatches(2), toBeDetermined: true });
+        rounds.push({ name: "Final", matches: createTBDMatches(1), toBeDetermined: true });
+    }
+
+    return rounds;
+}
 
 export const fetchTournamentData = async () => {
   const [teamsData, matchesData] = await Promise.all([
@@ -111,21 +130,36 @@ export const fetchTournamentData = async () => {
       roundsMap.get(row.Fase)?.matches.push(match);
   });
 
+  const generatedStructure = generateStructure(teams.length);
   const mergedRounds: Round[] = [];
-  const processedNames = new Set<string>();
+  const processedFaseNames = new Set<string>();
 
-  DEFAULT_ROUNDS.forEach(defaultRound => {
-      const name = defaultRound.name || "";
-      if (roundsMap.has(name)) {
-          mergedRounds.push(roundsMap.get(name)!);
+  generatedStructure.forEach(genRound => {
+      const stageName = genRound.name || "";
+      
+      // Find all rounds in roundsMap that belong to this stage
+      const matchingRounds: Round[] = [];
+      roundsMap.forEach((round, key) => {
+          let keyStage = key;
+           if (keyStage.startsWith("Rodada")) {
+                keyStage = keyStage.split(" ").slice(0, 2).join(" ");
+           }
+           if (keyStage === stageName || key === stageName) {
+               matchingRounds.push(round);
+               processedFaseNames.add(key);
+           }
+      });
+
+      if (matchingRounds.length > 0) {
+          mergedRounds.push(...matchingRounds);
       } else {
-          mergedRounds.push(defaultRound);
+          mergedRounds.push(genRound);
       }
-      processedNames.add(name);
   });
 
-  roundsMap.forEach((round, name) => {
-      if (!processedNames.has(name)) {
+  // Add any remaining rounds from data that weren't in the structure
+  roundsMap.forEach((round, key) => {
+      if (!processedFaseNames.has(key)) {
           mergedRounds.push(round);
       }
   });
