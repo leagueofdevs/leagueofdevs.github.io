@@ -9,7 +9,6 @@ const MATCHES_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4qBk403Ka
 interface TeamRow {
   Nome: string;
   Sigla: string;
-  Logo: string;
   Vitorias: string;
   Derrotas: string;
   [key: string]: string;
@@ -62,10 +61,9 @@ export const fetchTournamentData = async () => {
         }
     }
 
-    let logoUrl = row.Logo;
-    let localLogoFound = false;
+    let logoUrl = "";
 
-    // 1. Try to find local logo by Sigla
+    // Try to find local logo by Sigla
     if (row.Sigla) {
         const targetSigla = row.Sigla.trim().toLowerCase();
         for (const path in teamLogos) {
@@ -73,18 +71,6 @@ export const fetchTournamentData = async () => {
             const nameWithoutExt = fileName?.substring(0, fileName.lastIndexOf('.'));
             
             if (nameWithoutExt?.toLowerCase() === targetSigla) {
-                logoUrl = (teamLogos[path] as any).default;
-                localLogoFound = true;
-                break;
-            }
-        }
-    }
-
-    // 2. If not found by Sigla, try to use row.Logo as a filename match (legacy/fallback)
-    if (!localLogoFound && logoUrl && !logoUrl.startsWith('http')) {
-        const cleanName = logoUrl.split('/').pop();
-        for (const path in teamLogos) {
-            if (path.includes(cleanName!)) {
                 logoUrl = (teamLogos[path] as any).default;
                 break;
             }
