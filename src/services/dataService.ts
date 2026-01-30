@@ -70,7 +70,7 @@ export const fetchTournamentData = async () => {
 
   const teams: Team[] = teamsData.map(row => {
     const members = [];
-    for(let i=1; i<=6; i++) {
+    for(let i=1; i<=7; i++) {
         const nick = row[`Jog${i}_nick`];
         const mono = row[`Jog${i}_mono`];
         if(nick) {
