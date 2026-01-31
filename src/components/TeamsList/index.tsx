@@ -83,7 +83,8 @@ function TeamsList({ teams }: TeamsListProps) {
                 // Added "RES" for the 7th player
                 const role = ["TOP", "JG", "MID", "ADC", "SUP", "RES", "RES"][index] || "RES";
                 
-                const profileUrl = `https://www.op.gg/summoners/br/${encodeURIComponent(memberNameSplit)}`;
+                // OP.GG uses - for tag separator in URLs
+                const profileUrl = `https://www.op.gg/summoners/br/${encodeURIComponent(memberNameSplit.replace('#', '-'))}`;
 
                 return (
                     <p
